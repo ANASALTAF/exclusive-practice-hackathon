@@ -1,155 +1,60 @@
 import React from "react";
-import { TbSend2 } from "react-icons/tb";
-import Link from "next/link";
-import Image from "next/image";
+import { CiSearch } from "react-icons/ci";
+import { FaRegHeart, FaShoppingCart } from "react-icons/fa";
+import { FaRegUser } from "react-icons/fa6";
 import '../app/globals.css'
+import Link from "next/link";
 
-const Footer: React.FC = () => {
+const TopHeader = () => {
   return (
-    <footer className="bg-black text-gray-50 px-4 py-10 font-poppins">
-      <div className="max-w-[1270px] mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
-        {/* Exclusive & Subscribe Section */}
-        <div className="flex-1 max-w-[250px]">
-          <h2 className="font-Inter font-bold text-[24px] mb-4">Exclusive</h2>
-          <h3 className="font-medium text-[20px] mb-2">Subscribe</h3>
-          <p className="text-sm mb-4">Get 10% off your first order</p>
-          <div className="flex items-center bg-black border border-gray-50 rounded-[4px] h-[36px] overflow-hidden">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="bg-black text-gray-50 placeholder-gray-50 px-2 text-xs outline-none flex-grow"
-            />
-            <button className="bg-gray-50 text-black px-2 py-1">
-              <TbSend2 className="w-[16px] h-[16px]" />
-            </button>
-          </div>
-        </div>
-
-        {/* Support Section */}
-        <div className="flex-1 max-w-[250px]">
-          <h2 className="text-[20px] font-medium mb-4">Support</h2>
-          <p className="text-[16px] font-normal mb-2">
-            111 Bijoy Sarani, Dhaka, DH 1515, Bangladesh.
-          </p>
-          <p className="text-[16px] font-normal mb-2">exclusive@gmail.com</p>
-          <p className="text-[16px] font-normal">+88015-88888-9999</p>
-        </div>
-
-        {/* Account Section */}
-        <div className="flex-1 max-w-[250px]">
-          <h2 className="text-[20px] font-medium mb-4">Account</h2>
-          <ul className="space-y-2">
-            <li>
-              <Link href="#" className="text-[16px] font-normal">
-                My Account
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="text-[16px] font-normal">
-                Login / Register
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="text-[16px] font-normal">
-                Cart
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="text-[16px] font-normal">
-                Wishlist
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="text-[16px] font-normal">
-                Shop
-              </Link>
-            </li>
-          </ul>
-        </div>
-
-        {/* Quick Links Section */}
-        <div className="flex-1 max-w-[250px]">
-          <h2 className="text-[20px] font-medium mb-4">Quick Link</h2>
-          <ul className="space-y-2">
-            <li>
-              <Link href="#" className="text-[16px] font-normal">
-                Privacy Policy
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="text-[16px] font-normal">
-                Terms Of Use
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="text-[16px] font-normal">
-                FAQ
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="text-[16px] font-normal">
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </div>
-
-        {/* Download App Section */}
-        <div className="flex-1 max-w-[250px]">
-          <h2 className="text-[20px] font-medium mb-4">Download App</h2>
-          <p className="text-[16px] font-normal mb-4">
-            Save $3 with App New User Only
-          </p>
-          <div className="flex items-start mb-4">
-            {/* QR Code */}
-            <Image
-              src="/Qrcode 1.png"
-              alt="QR code for app download"
-              width={60}
-              height={60}
-              className="mr-4"
-            />
-            <div>
-              {/* Google Play Store */}
-              <Image
-                src="/GooglePlay.png"
-                alt="Google Play Store"
-                width={120}
-                height={40}
-                className="mb-2"
-              />
-              {/* App Store */}
-              <Image
-                src="/AppStore.png"
-                alt="Apple App Store"
-                width={120}
-                height={40}
-              />
-            </div>
-          </div>
-          <div className="flex space-x-4 text-lg">
-            <a href="#" className="hover:text-gray-400">
-              <i className="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" className="hover:text-gray-400">
-              <i className="fab fa-twitter"></i>
-            </a>
-            <a href="#" className="hover:text-gray-400">
-              <i className="fab fa-instagram"></i>
-            </a>
-            <a href="#" className="hover:text-gray-400">
-              <i className="fab fa-linkedin-in"></i>
-            </a>
-          </div>
-        </div>
+    <div className="w-full h-[48px] pt-3 bg-[#000000] text-[#FAFAFA] flex items-center justify-between px-4">
+      <div className="flex-grow text-center">
+        <p className="text-sm font-normal font-poppins">
+          Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!{" "}
+          <span className="font-semibold underline cursor-pointer">Shop Now</span>
+        </p>
       </div>
-
-      {/* Footer Bottom */}
-      <div className="text-center mt-10 text-sm">
-        <p> Copyright Rimel 2022. All rights reserved.</p>
-      </div>
-    </footer>
+      <select name="language" id="language" className="bg-[#000000] text-[#FAFAFA] text-center ml-4">
+        <option value="English">English</option>
+      </select>
+    </div>
   );
 };
 
-export default Footer;
+export default TopHeader;
+
+export const Header = () => {
+  return (
+    <div className="border-b-2 border-[#F5F5F5F9] mb-4">
+      <div className="flex flex-col md:flex-row w-full max-w-[1228px] mx-auto mt-[20px] items-center justify-between px-4 md:px-[100px]">
+        <h2 className="font-Inter font-bold text-[20px] text-[#000000]">Exclusive</h2>
+        <ul className="flex flex-wrap gap-[24px] text-[#000000]">
+          <li className="font-poppins text-[16px] font-normal cursor-pointer"><Link href="/">Home</Link></li>
+          <li className="font-poppins text-[16px] font-normal cursor-pointer"><Link href="/contact">Contact</Link></li>
+          <li className="font-poppins text-[16px] font-normal cursor-pointer"><Link href="/about">About</Link></li>
+          <li className="font-poppins text-[16px] font-normal cursor-pointer"><Link href="/signup">Sign Up</Link></li>
+          <li className="font-poppins text-[16px] font-normal cursor-pointer"><Link href="/cart">Cart</Link></li>
+          <li className="font-poppins text-[16px] font-normal cursor-pointer"><Link href="/checkout">Checkout</Link></li>
+          <li className="font-poppins text-[16px] font-normal cursor-pointer"><Link href="/productData">Products</Link></li> {/* ✅ Added ProductData Link */}
+        </ul>
+        <div className="flex items-center gap-4 flex-grow max-w-[300px] mt-4 md:mt-0">
+          <div className="flex items-center bg-gray-200 rounded-md flex-grow">
+            <input
+              type="text"
+              placeholder="What are you looking for?"
+              className="outline-none bg-transparent text-xs font-poppins text-[#000000] placeholder:text-[#000000] py-1 px-2 flex-grow"
+            />
+            <CiSearch className="text-[#000000] ml-2" />
+          </div>
+          <FaRegHeart className="text-[#000000] cursor-pointer" />
+          <Link href="/cart">
+            <FaShoppingCart className="text-[#000000] cursor-pointer" />
+          </Link>
+          <FaRegUser className="text-[#000000] cursor-pointer" />
+        </div>
+        <h2 className="text-xl font-bold"></h2>
+      </div>
+      <hr className="border-t border-black mt-2" />
+    </div>
+  );
+};

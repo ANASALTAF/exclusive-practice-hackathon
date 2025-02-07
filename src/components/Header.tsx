@@ -2,8 +2,8 @@ import React from "react";
 import { CiSearch } from "react-icons/ci";
 import { FaRegHeart, FaShoppingCart } from "react-icons/fa";
 import { FaRegUser } from "react-icons/fa6";
-import '../app/globals.css'
 import Link from "next/link";
+import "@/app/globals.css"; // ✅ Correct import path
 
 const TopHeader = () => {
   return (
@@ -30,9 +30,11 @@ export const Header = () => {
         <h2 className="font-Inter font-bold text-[20px] text-[#000000]">Exclusive</h2>
         <ul className="flex flex-wrap gap-[24px] text-[#000000]">
           <li className="font-poppins text-[16px] font-normal cursor-pointer"><Link href="/">Home</Link></li>
-          <li className="font-poppins text-[16px] font-normal cursor-pointer"><Link href="../">Contact</Link></li>
-          <li className="font-poppins text-[16px] font-normal cursor-pointer"><Link href="../about">About</Link></li>
-          <li className="font-poppins text-[16px] font-normal cursor-pointer"><Link href="../">Sign Up</Link></li>
+          <li className="font-poppins text-[16px] font-normal cursor-pointer"><Link href="/contact">Contact</Link></li>
+          <li className="font-poppins text-[16px] font-normal cursor-pointer"><Link href="/about">About</Link></li>
+          <li className="font-poppins text-[16px] font-normal cursor-pointer"><Link href="/signup">Sign Up</Link></li>
+          <li className="font-poppins text-[16px] font-normal cursor-pointer"><Link href="/cart">Cart</Link></li>
+          <li className="font-poppins text-[16px] font-normal cursor-pointer"><Link href="/checkout">Checkout</Link></li>
         </ul>
         <div className="flex items-center gap-4 flex-grow max-w-[300px] mt-4 md:mt-0">
           <div className="flex items-center bg-gray-200 rounded-md flex-grow">
@@ -44,10 +46,11 @@ export const Header = () => {
             <CiSearch className="text-[#000000] ml-2" />
           </div>
           <FaRegHeart className="text-[#000000] cursor-pointer" />
-          <FaShoppingCart className="text-[#000000] cursor-pointer" />
+          <Link href="/cart">
+            <FaShoppingCart className="text-[#000000] cursor-pointer" />
+          </Link>
           <FaRegUser className="text-[#000000] cursor-pointer" />
         </div>
-        <h2 className="text-xl font-bold"></h2>
       </div>
       <hr className="border-t border-black mt-2" />
     </div>
